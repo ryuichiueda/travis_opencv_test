@@ -4,6 +4,5 @@ dist: trusty
 script:
   - sudo apt-get update
   - sudo apt-get install libopencv-dev python-opencv
-  - sudo find / | grep cv2.so
   - export PYTHONPATH=$PYTHONPATH:/usr/lib/python2.7/dist-packages
   - ./test.py
