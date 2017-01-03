@@ -12,7 +12,9 @@ unzip opencv-3.0.0.zip
 cd opencv-3.0.0
 mkdir build
 cd build
-cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local 
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D WITH_V4L=ON -D WITH_QT=ON -D WITH_OPENGL=ON ..
+make -j $(nproc)
+sudo make install
 
 export PYTHON_INCLUDE_DIRS="/usr/include/python2.7"
 export PYTHON_LIBRARYS="/usr/lib/x86_64-linux-gnu/libpython2.7.so"
