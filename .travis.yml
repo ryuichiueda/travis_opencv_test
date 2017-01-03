@@ -2,6 +2,7 @@ sudo: required
 dist: trusty
 
 script:
-  - bash -xve ./install.bash
-  - source ~/.bashrc
+  - sudo apt-get update
+  - sudo apt-get install libopencv-dev python-opencv
+  - export PYTHONPATH=$PYTHONPATH:/usr/lib/python2.7/dist-packages
   - ./test.py
