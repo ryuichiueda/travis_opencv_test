@@ -6,15 +6,13 @@ cd ~
 wget https://github.com/Itseez/opencv/archive/3.0.0.zip -O opencv-3.0.0.zip
 unzip opencv-3.0.0.zip
 
-cd ~
-git clone --depth 1 https://github.com/Itseez/opencv_contrib.git opencv_contrib
+#cd ~
+#git clone --depth 1 https://github.com/Itseez/opencv_contrib.git opencv_contrib
 
 cd opencv-3.0.0
 mkdir build
 cd build
-cmake -D CMAKE_BUILD_TYPE=RELEASE \
-	-D CMAKE_INSTALL_PREFIX=/usr/local \
-	-D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib/modules 
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local 
 
 export PYTHON_INCLUDE_DIRS="/usr/include/python2.7"
 export PYTHON_LIBRARYS="/usr/lib/x86_64-linux-gnu/libpython2.7.so"
