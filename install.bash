@@ -16,11 +16,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB
 make -j $(nproc)
 sudo make install
 
-export PYTHON_INCLUDE_DIRS="/usr/include/python2.7"
-export PYTHON_LIBRARYS="/usr/lib/x86_64-linux-gnu/libpython2.7.so"
-
-make -j 4
-sudo make install
+sudo /bin/bash -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
 sudo ldconfig
 
 sudo apt-get install python-opencv
