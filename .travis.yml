@@ -3,4 +3,4 @@ dist: trusty
 
 script:
   - bash -xve ./install.bash
-  - bash test.py
+  - ./test.py
